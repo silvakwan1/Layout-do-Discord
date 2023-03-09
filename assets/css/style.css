@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+/* aqui estar todas as cores que usei na pagina*/
+
+:root{
+    /* color text */
+    --text-color-header: rgba(255, 255, 255, 1);
+    --text-color-button-download:rgba(255, 255, 255, 1);
+    --text-color-opem-discord:black;
+    --main-text-color:black;
+
+    /* color background */
+    --background-button-download: black;
+    --background-opem-discord: rgba(255, 255, 255, 1);
+    --background-section: rgba(255, 255, 255, 1);
+    --background-section-alternative: rgba(243, 243, 243, 1);
+    --background-footer:rgba(35, 39, 42, 1);
+}
+
+a/* ki estar o header */
+
+header{
+    height: 459px;
+    background: url(../image/Header-Background.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .description_header{
+    width: 757px;
+    text-align: center;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description_header h1{
+    width: 40%;
+    font-family: "Luckiest Guy";
+    font-size: 50px;
+    color: var(--text-color-header);
+}
+
+.description_header p{
+    color: var(--text-color-header);
+}
+
+#link_download{
+    display: inline-block;
+    padding: 11px 24px;
+    color: var(--text-color-opem-discord);
+    background: var(--background-opem-discord);
+    border-radius: 20px;
+    margin-right: 16px;
+}
+
+#opem_discord{
+    display: inline-block;
+    padding: 11px 17px;
+    color: var(--text-color-button-download);
+    background: var(--background-button-download);
+    border-radius: 20px;
+}
+
+#button_header{
+    display: flex;
+    
+    justify-content: center;
+}
+ 
+/* aqui estar localizado todas as fotos do menu */
+
+section:nth-child(1),section:nth-child(3){
+    background: var(--background-section);
+}
+
+section:nth-child(2),section:nth-child(4){
+    background: var(--background-section-alternative);
+}
+
+figure{
+    color: var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+figure h3{
+    margin-bottom: 16px;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+figcaption{
+    width: 348px;
+}
+
+.Section_Image_prime{
+    padding-bottom: 40px;
+}
+
+.Section_Image_second{
+    padding-bottom: 27px;
+}
+
+.Section_Image_second img{
+    order: 1;
+}
+
+.Section_Image_third{
+    padding-bottom: 67px;
+}
+
+.Section_template_Image{
+    flex-direction: column-reverse;
+    padding-bottom: 45px;
+}
+
+.Section_template_Image figcaption{
+    width: 802px;
+}
+
+.Section_template_Image figcaption h3{
+   font-family: "Luckiest Guy";
+   text-align: center;
+   margin: auto;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 134px;
+    background: var(--background-footer);
+}
+
+/* aqui começa a responsividade */
+
+@media(max-width: 1050px){
+    header{
+        background-size: cover;
+    }
+    figure h3{
+        margin-bottom: 16px;
+        font-weight: 800;
+        font-size: 40px;
+    }
+    
+    .Section_Image_prime img{
+        width: 460px;
+        
+    }
+
+    figcaption{
+        width: 348px;
+    }
+
+    .Section_Image_second img{
+        width: 460px;
+    }
+    
+    .Section_Image_third img{
+        width: 460px;
+    }
+    
+    .Section_template_Image figcaption{
+        width: 750px;
+    }
+    
+    .Section_template_Image img{
+        width: 740px;
+    }
+    .Section_template_Image figcaption h3{
+       width: 508px;
+       text-align: center;
+       margin: auto;
+    }
+    
+}
+
+@media(max-width: 900px){
+    header .description_header{
+     text-align: center;
+        width: 75%;
+        gap: 20px;
+    }
+    .description_header h1{
+        font-size: 40px;
+    }
+    #link_download{
+        padding: 6px 18px;
+    }
+    #opem_discord{
+        padding: 6px 14px;
+    }
+    figure h3{
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    
+    .Section_Image_prime img{
+        width: 60%;
+        
+    }
+
+    figcaption{
+        width: 260px;
+    }
+
+    .Section_Image_second img{
+        width: 50%;
+    }
+    
+    .Section_Image_third img{
+        width: 50%;
+    }
+    
+    .Section_template_Image figcaption{
+        width: 610px;
+    }
+    
+    .Section_template_Image img{
+        width: 600px;
+    }
+    .Section_template_Image figcaption h3{
+       width: 508px;
+       text-align: center;
+       margin: auto;
+    }
+    
+}
+
+@media(max-width: 750px){
+   
+    figure {
+        flex-direction: column;
+       
+    }
+    figure h3{
+        margin-bottom: 16px;
+        font-weight: 800;
+        font-size: 30px;
+    }
+   
+    .Section_Image_second img{
+        order: 0;
+        width: 550px;
+    }
+    .Section_Image_second figcaption {
+        width: 550px;
+    }
+    .Section_Image_prime figcaption {
+        width: 550px;
+    }
+    .Section_Image_prime img{
+        width: 550px;
+        
+    }
+    
+    .Section_Image_third img{
+        width: 550px;
+    }
+    .Section_Image_third figcaption {
+        width: 550px;
+    }
+    
+    .Section_template_Image img{
+        width: 550px;
+    }
+
+    .Section_template_Image figcaption{
+        width: 550px;
+    }
+    .Section_template_Image figcaption h3{
+       font-size: 32px;
+       text-align: start;
+       margin: 0;
+    }
+    
+    #button_header{
+        flex-direction: column;
+       
+    }
+    #link_download{
+        margin-bottom: 16px;
+        width: 380px;
+
+    }
+    #opem_discord{ 
+        text-align: center;
+        width: 380px;
+    }
+}
+
+@media(max-width: 650px){
+    .description_header h1{
+        font-size: 32px;
+    }
+   
+    figure {
+        flex-direction: column;
+       
+    }
+    figure h3{
+        margin-bottom: 16px;
+        font-weight: 800;
+        font-size: 24px;
+    }
+   
+    .Section_Image_second img{
+        order: 0;
+        width: 379px;
+    }
+    .Section_Image_second figcaption {
+        width: 379px;
+    }
+    .Section_Image_prime figcaption {
+        width: 379px;
+    }
+    .Section_Image_prime img{
+        width: 379px;
+        
+    }
+    
+    .Section_Image_third img{
+        width: 379px;
+    }
+    .Section_Image_third figcaption {
+        width: 379px;
+    }
+    
+    .Section_template_Image img{
+        width: 379px;
+    }
+
+    .Section_template_Image figcaption{
+        width: 379px;
+    }
+    .Section_template_Image figcaption h3{
+        width: 379px;
+       font-size: 32px;
+       text-align: start;
+       margin: 0;
+    }
+    
+    #button_header{
+        flex-direction: column;
+       
+    }
+    #link_download{
+        margin-bottom: 16px;
+        width: 380px;
+
+    }
+    #opem_discord{ 
+        text-align: center;
+        width: 380px;
+    }
+}
+
+@media(max-width: 379px){
+    .description_header h1{
+        font-size: 32px;
+    }
+   
+    figure {
+        flex-direction: column;
+       
+    }
+    figure h3{
+        margin-bottom: 16px;
+        font-weight: 800;
+        font-size: 24px;
+    }
+   
+    .Section_Image_second img{
+        order: 0;
+        width: 300px;
+    }
+    .Section_Image_second figcaption {
+        width: 300px;
+    }
+    .Section_Image_prime figcaption {
+        width: 300px;
+    }
+    .Section_Image_prime img{
+        width: 300px;
+        
+    }
+    
+    .Section_Image_third img{
+        width: 300px;
+
+    }
+    .Section_Image_third figcaption {
+        width: 300px;
+    }
+    
+    .Section_template_Image img{
+        width: 300px;
+    }
+
+    .Section_template_Image figcaption{
+        width: 300px;
+    }
+    .Section_template_Image figcaption h3{
+        width: 300px;
+       font-size: 32px;
+       text-align: start;
+       margin: 0;
+    }
+    
+    #button_header{
+        flex-direction: column;
+       
+    }
+    #link_download{
+        margin-bottom: 16px;
+        width: 300px;
+
+    }
+    #opem_discord{ 
+        text-align: center;
+        width: 300px;
+    }
+}
